@@ -72,3 +72,52 @@ function change (getChanged) {
 var changeString = change("Harry, Hermione, Ron, Snape, Dumbledore");
 console.log(changeString);
 
+// Number - 6 - Format a number to use a specific number of decimal places, as for money: 2.1 → 2.10
+
+function monies (amount) {
+	var costs = amount.toFixed(8);
+	return costs;
+};
+
+var lotsaMonies = monies(1.8);
+console.log(lotsaMonies);
+
+// Number - 7 - Fuzzy-match a number: is the number above or below a number within a certain percent?
+
+// Number - 8 - Find the number of hours or days difference between two dates.
+/*
+function days_between (date1, date2) {
+
+    // The number of milliseconds in one day
+    var ONE_DAY = 1000 * 60 * 60 * 24
+
+    // Convert both dates to milliseconds
+    var date1_ms = date1.getTime();
+    var date2_ms = date2.getTime();
+
+    // Calculate the difference in milliseconds
+    var difference_ms = Math.abs(date1_ms - date2_ms)
+    
+    // Convert back to days and return
+    return Math.round(difference_ms/ONE_DAY)
+};
+
+var dayDifference = days_between(23, 17);
+console.log(dayDifference);
+*/
+
+// Number - 9 - Given a string version of a number such as "42", return the value as an actual Number, such as 42.
+
+var number = "2011",
+	 numNum = function () {
+	 	theNumber = parseInt(number);
+	 return number;
+	 };
+
+console.log("I see that the number is " + numNum());
+
+// Array - 10 - Find the smallest value in an array that is greater than a given number
+
+// Array - 11 - Find the total value of just the numbers in an array, even if some of the items are not numbers.
+
+// Array - 12 - Given an array of objects and the name of a key, return the array sorted by the value of that key in each of the objects: "a" + [{a:2}, {a:3},{a:1}] → [{a:1},{a:2},{a:3}].
