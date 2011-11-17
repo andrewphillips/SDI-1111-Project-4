@@ -82,31 +82,7 @@ function monies (amount) {
 var lotsaMonies = monies(1.8);
 console.log(lotsaMonies);
 
-// Number - 7 - Fuzzy-match a number: is the number above or below a number within a certain percent?
-
-// Number - 8 - Find the number of hours or days difference between two dates.
-/*
-function days_between (date1, date2) {
-
-    // The number of milliseconds in one day
-    var ONE_DAY = 1000 * 60 * 60 * 24
-
-    // Convert both dates to milliseconds
-    var date1_ms = date1.getTime();
-    var date2_ms = date2.getTime();
-
-    // Calculate the difference in milliseconds
-    var difference_ms = Math.abs(date1_ms - date2_ms)
-    
-    // Convert back to days and return
-    return Math.round(difference_ms/ONE_DAY)
-};
-
-var dayDifference = days_between(23, 17);
-console.log(dayDifference);
-*/
-
-// Number - 9 - Given a string version of a number such as "42", return the value as an actual Number, such as 42.
+// Number - 7 - Given a string version of a number such as "42", return the value as an actual Number, such as 42.
 
 var number = "2011",
 	 numNum = function () {
@@ -116,7 +92,7 @@ var number = "2011",
 
 console.log("I see that the number is " + numNum());
 
-// Array - 10 - Find the smallest value in an array that is greater than a given number
+// Array - 8 - Find the smallest value in an array that is greater than a given number
 
 function smallNumber (baseline, numArray) {
 		for (var i =0; i < numArray.length; i++) {
@@ -129,13 +105,11 @@ function smallNumber (baseline, numArray) {
 var theNumbaz = smallNumber (27, [5, 17, 43, 175, 3025]);
 console.log (theNumbaz);
 
-// Array - 11 - Find the total value of just the numbers in an array, even if some of the items are not numbers.
-
-// Array - 12 - Given an array of objects and the name of a key, return the array sorted by the value of that key in each of the objects: "a" + [{a:2}, {a:3},{a:1}] → [{a:1},{a:2},{a:3}].
+// Array - 9 - Given an array of objects and the name of a key, return the array sorted by the value of that key in each of the objects: "a" + [{a:2}, {a:3},{a:1}] → [{a:1},{a:2},{a:3}].
 
 function eating (vegetables) {
 		function sortVeggies(a, b) {
-			return a.place - b.place;
+			return a.spot - b.spot;
 		}
 		var veggieOrder = (vegetables.sort(sortVeggies));
 		return veggieOrder;
@@ -144,15 +118,15 @@ function eating (vegetables) {
 var goodVeggies = 
 		eating ([{
 				name: "Broccoli",
-				place: 2
+				spot: 2
 			}, {
 				name: "Squash",
-				place: 1
+				spot: 1
 			}, {
 				name: "Eggplant",
-				place: 4
+				spot: 4
 			}, {
 				name: "Mushrooms",
-				place: 3
+				spot: 3
 		}]);
 console.log(goodVeggies);
