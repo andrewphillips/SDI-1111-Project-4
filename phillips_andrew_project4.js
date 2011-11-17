@@ -38,7 +38,7 @@ console.log(isValid);
 // String - 3 - Is the string a URL? (Does it start with http: or https:?)
 
 function urlCheck (url) {
-	var urlz = /(http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?/; // regEx again to see if the string has a https: or http:
+	var urlz = /(http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?/; // regEx check for http:/https:
 		if (url.match(urlz)) {
 			yesUrl = "The URL, " + url + ", is looking just fine!";
 			return yesUrl;
@@ -53,7 +53,7 @@ console.log(greatUrl);
 // String - 4 - Title-case a string (split into words, then uppercase the first letter of each word)
 
 var stuff = "i wish i were uppercase!";
-	stuff = stuff.toLowerCase().replace(/^(.)|\s(.)/g,  // regEx 
+	stuff = stuff.toLowerCase().replace(/^(.)|\s(.)/g, 
 		function (writeIt) {
 		return writeIt.toUpperCase();
 		}
@@ -118,6 +118,17 @@ console.log("I see that the number is " + numNum());
 
 // Array - 10 - Find the smallest value in an array that is greater than a given number
 
+function smallNumber (baseline, numArray) {
+		for (var i =0; i < numArray.length; i++) {
+			 if (numArray[i] > baseline) {
+			 return numArray[i];
+			 }
+		}
+};
+
+var theNumbaz = smallNumber (27, [5, 17, 43, 175, 3025]);
+console.log (theNumbaz);
+
 // Array - 11 - Find the total value of just the numbers in an array, even if some of the items are not numbers.
 
 // Array - 12 - Given an array of objects and the name of a key, return the array sorted by the value of that key in each of the objects: "a" + [{a:2}, {a:3},{a:1}] → [{a:1},{a:2},{a:3}].
@@ -130,7 +141,8 @@ function eating (vegetables) {
 		return veggieOrder;
 };
 
-var goodVeggies = eating ([{
+var goodVeggies = 
+		eating ([{
 				name: "Broccoli",
 				place: 2
 			}, {
@@ -142,5 +154,5 @@ var goodVeggies = eating ([{
 			}, {
 				name: "Mushrooms",
 				place: 3
-}]);
+		}]);
 console.log(goodVeggies);
