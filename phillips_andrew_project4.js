@@ -54,7 +54,21 @@ console.log(greatUrl);
 
 var stuff = "i wish i were uppercase!";
 	stuff = stuff.toLowerCase().replace(/^(.)|\s(.)/g,  // regEx 
-	function (writeIt) {
-	return writeIt.toUpperCase();
-	});
-	console.log(stuff); //This displays the string with capital letters!
+		function (writeIt) {
+		return writeIt.toUpperCase();
+		}
+	);
+	
+console.log(stuff); //This displays the string with capital letters!
+	
+// String - 5 - Given a string that is a list of things separated by a given string, as well as another string separator, return a string with the first separator changed to the second: "a,b,c" + "," + "/" → "a/b/c".
+
+function change (getChanged) {
+		var slash = " /";
+		var changer = getChanged.replace(/,/g, slash);
+	return changer;		
+};
+
+var changeString = change("Harry, Hermione, Ron, Snape, Dumbledore");
+console.log(changeString);
+
