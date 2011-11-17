@@ -121,3 +121,26 @@ console.log("I see that the number is " + numNum());
 // Array - 11 - Find the total value of just the numbers in an array, even if some of the items are not numbers.
 
 // Array - 12 - Given an array of objects and the name of a key, return the array sorted by the value of that key in each of the objects: "a" + [{a:2}, {a:3},{a:1}] → [{a:1},{a:2},{a:3}].
+
+function eating (vegetables) {
+		function sortVeggies(a, b) {
+			return a.place - b.place;
+		}
+		var veggieOrder = (vegetables.sort(sortVeggies));
+		return veggieOrder;
+};
+
+var goodVeggies = eating ([{
+				name: "Broccoli",
+				place: 2
+			}, {
+				name: "Squash",
+				place: 1
+			}, {
+				name: "Eggplant",
+				place: 4
+			}, {
+				name: "Mushrooms",
+				place: 3
+}]);
+console.log(goodVeggies);
