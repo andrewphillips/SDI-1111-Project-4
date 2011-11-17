@@ -16,5 +16,23 @@ function numberCheck (myNumber) {
 				}
 		}
 };
-
 numberCheck("332-422-9040");
+
+
+// String - 2 - Does a string follow an aaa@bbb.ccc pattern like an email address?
+
+function emailValidate (address) {
+		var email = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/; // regEx to verify format
+			if (address.match(email)) {
+				validEmail = "This email is valid" // shows up if email is in a valid format
+				return validEmail;
+			} else {
+				notValidEmail = "This email format is invalid; be sure to check if \'@\' and \'.\' are in the right place." // prints if invalid
+				return notValidEmail;
+			}
+};
+var isValid = emailValidate("mo@bettah.com");
+console.log(isValid);
+
+
+// 
