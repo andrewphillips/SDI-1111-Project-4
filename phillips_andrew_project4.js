@@ -35,4 +35,26 @@ var isValid = emailValidate("mo@bettah.com");
 console.log(isValid);
 
 
-// 
+// String - 3 - Is the string a URL? (Does it start with http: or https:?)
+
+function urlCheck (url) {
+	var urlz = /(http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?/; // regEx again to see if the string has a https: or http:
+		if (url.match(urlz)) {
+			yesUrl = "The URL, " + url + ", is looking just fine!";
+			return yesUrl;
+		} else {
+			noUrl = "This URL won\'t work.  Make sure that " + url + " follows the format: http(s)://domain.com(.net, .edu, etc)";
+			return noUrl;
+		}
+};
+var greatUrl = urlCheck("http://www.bliggityblah.com");
+console.log(greatUrl);
+
+// String - 4 - Title-case a string (split into words, then uppercase the first letter of each word)
+
+var stuff = "i wish i were uppercase!";
+	stuff = stuff.toLowerCase().replace(/^(.)|\s(.)/g,  // regEx 
+	function (writeIt) {
+	return writeIt.toUpperCase();
+	});
+	console.log(stuff); //This displays the string with capital letters!
