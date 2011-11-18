@@ -59,7 +59,7 @@ var stuff = "i wish i were uppercase!";
 		}
 	);
 	
-console.log(stuff); //This displays the string with capital letters!
+console.log(stuff); 
 	
 // String - 5 - Given a string that is a list of things separated by a given string, as well as another string separator, return a string with the first separator changed to the second: "a,b,c" + "," + "/" → "a/b/c".
 
